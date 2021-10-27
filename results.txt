@@ -1,0 +1,40 @@
+M1 Macbook Air
+16G memory
+Monterey
+Python 3 ARM64
+
+Batch Size: 256
+
+peter@AirPete bin % time ./python3 /Users/peter/tf-train-test.py 
+2.4.0-rc0
+2021-10-27 08:29:48.064385: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
+2021-10-27 08:29:48.064854: W tensorflow/core/platform/profile_utils/cpu_utils.cc:126] Failed to get CPU frequency: 0 Hz
+2021-10-27 08:29:48.303795: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+Train on 235 steps, validate on 40 steps
+Epoch 1/12
+234/235 [============================>.] - ETA: 0s - batch: 116.5000 - size: 1.0000 - loss: 0.2167 - accuracy: 0.9378/Users/peter/tensorflow_macos_venv/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:2325: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  warnings.warn('`Model.state_updates` will be removed in a future version. '
+235/235 [==============================] - 12s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.2161 - accuracy: 0.9379 - val_loss: 0.0704 - val_accuracy: 0.9798
+Epoch 2/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0547 - accuracy: 0.9838 - val_loss: 0.0468 - val_accuracy: 0.9852
+Epoch 3/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0367 - accuracy: 0.9886 - val_loss: 0.0349 - val_accuracy: 0.9875
+Epoch 4/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0259 - accuracy: 0.9919 - val_loss: 0.0330 - val_accuracy: 0.9888
+Epoch 5/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0178 - accuracy: 0.9943 - val_loss: 0.0433 - val_accuracy: 0.9867
+Epoch 6/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0139 - accuracy: 0.9958 - val_loss: 0.0358 - val_accuracy: 0.9894
+Epoch 7/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0091 - accuracy: 0.9972 - val_loss: 0.0334 - val_accuracy: 0.9904
+Epoch 8/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0080 - accuracy: 0.9972 - val_loss: 0.0360 - val_accuracy: 0.9896
+Epoch 9/12
+235/235 [==============================] - 12s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0062 - accuracy: 0.9979 - val_loss: 0.0350 - val_accuracy: 0.9900
+Epoch 10/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0038 - accuracy: 0.9988 - val_loss: 0.0344 - val_accuracy: 0.9899
+Epoch 11/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0044 - accuracy: 0.9984 - val_loss: 0.0392 - val_accuracy: 0.9897
+Epoch 12/12
+235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0079 - accuracy: 0.9975 - val_loss: 0.0424 - val_accuracy: 0.9894
+./python3 /Users/peter/tf-train-test.py  86.64s user 23.11s system 78% cpu 2:20.20 total
