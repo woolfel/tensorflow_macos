@@ -121,7 +121,7 @@ done
 
 # Do a software version check.
 
-if [[ $(sw_vers -productName) != macOS ]] || [[ $(sw_vers -productVersion) != "11."* ]] ; then 
+if [[ $(sw_vers -productName) != macOS ]] || [[ $(sw_vers -productVersion) != "12."* ]] ; then 
   error_exit "TensorFlow with ML Compute acceleration is only available on macOS 11.0 and later." 
 fi
 
