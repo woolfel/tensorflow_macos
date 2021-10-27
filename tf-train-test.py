@@ -8,6 +8,8 @@ tf.enable_v2_behavior()
 disable_eager_execution()
 mlcompute.set_mlc_device(device_name='gpu')
 
+# the benchmark loads the MNIST dataset from tensorflow datasets
+# a possible alternative is fashion MNIST, which should require more power
 (ds_train, ds_test), ds_info = tfds.load(
     'mnist',
     split=['train', 'test'],
@@ -20,6 +22,7 @@ def normalize_img(image, label):
   """Normalizes images: `uint8` -> `float32`."""
   return tf.cast(image, tf.float32) / 255., label
 
+# you can change the batch size to see how it performs. Larger batch size will stress GPU more
 batch_size = 128
 
 ds_train = ds_train.map(
