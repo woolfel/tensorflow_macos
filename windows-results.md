@@ -2,13 +2,14 @@
 For comparison, I ran similar test on windows for a point of reference.
 
 ## Hardware
-AMD Ryzen 3700x
-64G DDR4 3600
-Crucial P2 1TB 3D NAND NVMe PCIe M.2 SSD Up to 2400 MB/s
+* AMD Ryzen 3700x
+* RTX 2060
+* 64G DDR4 3600
+* Crucial P2 1TB 3D NAND NVMe PCIe M.2 SSD Up to 2400 MB/s
 
 ## Software
-Python 3.9.6
-Tensorflow 2.5.0
+* Python 3.9.6
+* Tensorflow 2.5.0
 
 <pre>
 2021-11-02 20:43:22.950473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
