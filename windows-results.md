@@ -10,6 +10,7 @@ Crucial P2 1TB 3D NAND NVMe PCIe M.2 SSD Up to 2400 MB/s
 Python 3.9.6
 Tensorflow 2.5.0
 
+<pre>
 2021-11-02 20:43:22.950473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
 2021-11-02 20:43:22.953029: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
@@ -51,3 +52,4 @@ Epoch 11/12
 469/469 [==============================] - 4s 7ms/step - loss: 0.0045 - accuracy: 0.9986 - val_loss: 0.0349 - val_accuracy: 0.9910
 Epoch 12/12
 469/469 [==============================] - 3s 7ms/step - loss: 0.0027 - accuracy: 0.9991 - val_loss: 0.0485 - val_accuracy: 0.9890
+</pre>
