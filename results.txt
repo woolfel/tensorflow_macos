@@ -116,7 +116,7 @@ Epoch 12/12
 ./python3 /Users/peter/tf-train-test.py  86.64s user 23.13s system 79% cpu 2:17.89 total
 
 
-Results with tensorflow-metal
+Results with tensorflow-metal and fashion_mnist
 
 (tensorflow_ml) peter@AirPete benchmarks % python3 ./tfmetal_mnist_test.py 
 2.6.0
