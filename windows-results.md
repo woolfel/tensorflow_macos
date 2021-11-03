@@ -9,7 +9,8 @@ For comparison, I ran similar test on windows for a point of reference.
 
 ## Software
 * Python 3.9.6
-* Tensorflow 2.5.0
+* Tensorflow 2.5.0 with GPU
+* CUDA 11.2
 
 <pre>
 2021-11-02 20:43:22.950473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
