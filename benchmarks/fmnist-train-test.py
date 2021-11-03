@@ -8,10 +8,8 @@ tf.enable_v2_behavior()
 disable_eager_execution()
 mlcompute.set_mlc_device(device_name='gpu')
 
-# the benchmark loads the MNIST dataset from tensorflow datasets
-# a possible alternative is fashion MNIST, which should require more power
 (ds_train, ds_test), ds_info = tfds.load(
-    'mnist',
+    'fashion_mnist',
     split=['train', 'test'],
     shuffle_files=True,
     as_supervised=True,
@@ -22,8 +20,7 @@ def normalize_img(image, label):
   """Normalizes images: `uint8` -> `float32`."""
   return tf.cast(image, tf.float32) / 255., label
 
-# you can change the batch size to see how it performs. Larger batch size will stress GPU more
-batch_size = 128
+batch_size = 1024
 
 ds_train = ds_train.map(
     normalize_img, num_parallel_calls=tf.data.experimental.AUTOTUNE)
@@ -45,11 +42,13 @@ model = tf.keras.models.Sequential([
                  activation='relu'),
   tf.keras.layers.Conv2D(64, kernel_size=(3, 3),
                  activation='relu'),
+  tf.keras.layers.Conv2D(64, kernel_size=(3, 3),
+                 activation='relu'),
+  tf.keras.layers.Conv2D(32, kernel_size=(1, 1),
+                 activation='relu'),
   tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
-#   tf.keras.layers.Dropout(0.25),
   tf.keras.layers.Flatten(),
   tf.keras.layers.Dense(128, activation='relu'),
-#   tf.keras.layers.Dropout(0.5),
   tf.keras.layers.Dense(10, activation='softmax')
 ])
 model.compile(
