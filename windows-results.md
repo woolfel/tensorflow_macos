@@ -3,7 +3,7 @@ For comparison, I ran similar test on windows for a point of reference.
 
 ## Hardware
 * AMD Ryzen 3700x
-* RTX 2060
+* RTX 2060 6G GDDR6
 * 64G DDR4 3600
 * Crucial P2 1TB 3D NAND NVMe PCIe M.2 SSD Up to 2400 MB/s
 
