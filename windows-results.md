@@ -131,3 +131,23 @@ Epoch 14/15
 Epoch 15/15
 15/15 [==============================] - 2s 122ms/step - loss: 0.2523 - accuracy: 0.9113 - val_loss: 0.2926 - val_accuracy: 0.8943
 </pre>
+
+## Impact of memory on Training
+
+With a RTX 2060 6G card, the practical limit is 5.5G. The way CUDA support works in tensorflow, it allocates as much memory as possible at startup. There's no practical way to see exactly how much memory tensorflow uses from windows. There's NVidia tools to inspect memory usage on the video card.
+
+To figure out the practical limit, we can look at fashion mnist dataset. After tensorflow_dataset converts it to tfrecords, the size of the files:
+
+* test 5499 KB or 5.37 MB
+* train 32889 KB or 32.12 MB
+
+We know with batch 4096 it gets memory errors. From the MacOS benchmark, we see tensorflow set to batch 256 uses 1.3G of memory. Which would mean the ratio of dataset size to memory used:
+
+* train + test = 37.5 MB
+* 35 = 1300 / 37.5
+
+If we look at COCO dataset after tensorflow_datasets splits the data, each file is roughly 105 MB. The actual file size varies from 104 to 108 MB, but I'll use 100 MB to make things easy. For each run TF will load train and test data, which is roughly 200 MB.
+
+* 200 x 35 = 7G projected memory requirement
+
+When the memory requirements exceeds physical memory, the system will use swap. In many cases, it might still run, but it will take longer to train.
