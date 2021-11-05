@@ -141,12 +141,12 @@ To figure out the practical limit, we can look at fashion mnist dataset. After t
 * test 5499 KB or 5.37 MB
 * train 32889 KB or 32.12 MB
 
-We know with batch 4096 it gets memory errors. From the MacOS benchmark, we see tensorflow set to batch 256 uses 1.3G of memory. Which would mean the ratio of dataset size to memory used:
+We know with batch 4096 it gets memory errors. From the MacOS benchmark results, we see tensorflow set to batch 256 uses 1.3G of memory. Which would mean the ratio of dataset size to memory used:
 
 * train + test = 37.5 MB
 * 35 = 1300 / 37.5
 
-If we look at COCO dataset after tensorflow_datasets splits the data, each file is roughly 105 MB. The actual file size varies from 104 to 108 MB, but I'll use 100 MB to make things easy. For each run TF will load train and test data, which is roughly 200 MB.
+It's important to keep in mind the memory used varies with batch size. If you're using batch 256, we can do some simple calculation to estimate. If we look at COCO dataset after tensorflow_datasets splits the data, each file is roughly 105 MB. The actual file size varies from 104 to 108 MB, but I'll use 100 MB to make things easy. For each run TF will load train and test data, which is roughly 200 MB.
 
 * 200 x 35 = 7G projected memory requirement
 
