@@ -55,7 +55,7 @@ model.compile(
     optimizer=tf.keras.optimizers.Adam(0.001),
     metrics=['accuracy'],
 )
-
+ # changing the epochs count doesn't affect total memory used, but it does improve accuracy
 model.fit(
     ds_train,
     epochs=15,
