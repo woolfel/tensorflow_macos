@@ -151,74 +151,76 @@ I increased the batch size until tensorflow started to give me memory warnings. 
 
 <pre>
 PS G:\fashionmnist> python .\tf_fmnist_benchmark.py
-2021-11-05 09:30:43.047596: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2021-11-07 08:09:48.982672: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
 2.5.0
-2021-11-05 09:30:45.010298: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
-2021-11-05 09:30:45.063473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
+2021-11-07 08:09:50.928591: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2021-11-07 08:09:50.956912: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
 pciBusID: 0000:0a:00.0 name: GeForce RTX 2060 computeCapability: 7.5
 coreClock: 1.83GHz coreCount: 30 deviceMemorySize: 6.00GiB deviceMemoryBandwidth: 312.97GiB/s
-2021-11-05 09:30:45.063595: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
-2021-11-05 09:30:45.075178: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
-2021-11-05 09:30:45.075251: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
-2021-11-05 09:30:45.078338: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
-2021-11-05 09:30:45.079255: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
-2021-11-05 09:30:45.083224: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
-2021-11-05 09:30:45.085660: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
-2021-11-05 09:30:45.086159: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
-2021-11-05 09:30:45.086458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
-2021-11-05 09:30:45.087059: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+2021-11-07 08:09:50.957020: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2021-11-07 08:09:50.968094: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2021-11-07 08:09:50.968163: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2021-11-07 08:09:50.971264: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2021-11-07 08:09:50.972197: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2021-11-07 08:09:50.976312: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
+2021-11-07 08:09:50.978768: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2021-11-07 08:09:50.979184: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2021-11-07 08:09:50.979297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2021-11-07 08:09:50.979872: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
 To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2021-11-05 09:30:45.090456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
+2021-11-07 08:09:50.982227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
 pciBusID: 0000:0a:00.0 name: GeForce RTX 2060 computeCapability: 7.5
 coreClock: 1.83GHz coreCount: 30 deviceMemorySize: 6.00GiB deviceMemoryBandwidth: 312.97GiB/s
-2021-11-05 09:30:45.090573: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
-2021-11-05 09:30:45.534974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
-2021-11-05 09:30:45.535077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0
-2021-11-05 09:30:45.535904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N
-2021-11-05 09:30:45.536640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3961 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2060, pci bus id: 0000:0a:00.0, compute capability: 7.5)
+2021-11-07 08:09:50.982897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2021-11-07 08:09:51.407728: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-11-07 08:09:51.407847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0
+2021-11-07 08:09:51.408895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N
+2021-11-07 08:09:51.409113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3961 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2060, pci bus id: 0000:0a:00.0, compute capability: 7.5)
 Epoch 1/15
-2021-11-05 09:30:45.965141: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
-2021-11-05 09:30:46.824558: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
-2021-11-05 09:30:47.229584: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
-2021-11-05 09:30:47.824028: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
-2021-11-05 09:30:48.240581: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
-2021-11-05 09:30:48.424570: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:48.424739: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:48.882287: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:48.882453: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:48.961838: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.60GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:48.961997: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.60GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:49.124881: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.77GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-2021-11-05 09:30:49.125041: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.77GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
-15/15 [==============================] - 7s 243ms/step - loss: 1.1497 - accuracy: 0.6212 - val_loss: 0.6793 - val_accuracy: 0.7526
+2021-11-07 08:09:51.884153: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2021-11-07 08:09:52.672148: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2021-11-07 08:09:53.080443: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
+2021-11-07 08:09:53.646935: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2021-11-07 08:09:54.043437: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2021-11-07 08:09:54.258990: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.259152: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.710250: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.17GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.710399: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.17GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.766104: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.766255: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.767023: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.767443: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.55GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.863704: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-11-07 08:09:54.863855: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.16GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+15/15 [==============================] - 12s 483ms/step - loss: 1.5502 - accuracy: 0.4406 - val_loss: 0.9833 - val_accuracy: 0.6618
 Epoch 2/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.5870 - accuracy: 0.7871 - val_loss: 0.5394 - val_accuracy: 0.8050
+15/15 [==============================] - 4s 258ms/step - loss: 0.8061 - accuracy: 0.7056 - val_loss: 0.6691 - val_accuracy: 0.7483
 Epoch 3/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.4839 - accuracy: 0.8295 - val_loss: 0.4683 - val_accuracy: 0.8322
+15/15 [==============================] - 4s 258ms/step - loss: 0.5819 - accuracy: 0.7807 - val_loss: 0.5340 - val_accuracy: 0.8044
 Epoch 4/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.4281 - accuracy: 0.8492 - val_loss: 0.4374 - val_accuracy: 0.8415
+15/15 [==============================] - 4s 259ms/step - loss: 0.4780 - accuracy: 0.8303 - val_loss: 0.4620 - val_accuracy: 0.8355
 Epoch 5/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3950 - accuracy: 0.8611 - val_loss: 0.4118 - val_accuracy: 0.8519
+15/15 [==============================] - 4s 258ms/step - loss: 0.4194 - accuracy: 0.8515 - val_loss: 0.4241 - val_accuracy: 0.8457
 Epoch 6/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3722 - accuracy: 0.8697 - val_loss: 0.3932 - val_accuracy: 0.8612
+15/15 [==============================] - 4s 258ms/step - loss: 0.3805 - accuracy: 0.8650 - val_loss: 0.3905 - val_accuracy: 0.8598
 Epoch 7/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3550 - accuracy: 0.8752 - val_loss: 0.3713 - val_accuracy: 0.8710
+15/15 [==============================] - 4s 258ms/step - loss: 0.3614 - accuracy: 0.8716 - val_loss: 0.3878 - val_accuracy: 0.8582
 Epoch 8/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3345 - accuracy: 0.8828 - val_loss: 0.3597 - val_accuracy: 0.8735
+15/15 [==============================] - 4s 259ms/step - loss: 0.3441 - accuracy: 0.8764 - val_loss: 0.3562 - val_accuracy: 0.8728
 Epoch 9/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3243 - accuracy: 0.8855 - val_loss: 0.3534 - val_accuracy: 0.8751
+15/15 [==============================] - 4s 258ms/step - loss: 0.3219 - accuracy: 0.8844 - val_loss: 0.3390 - val_accuracy: 0.8792
 Epoch 10/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.3090 - accuracy: 0.8911 - val_loss: 0.3285 - val_accuracy: 0.8825
+15/15 [==============================] - 4s 259ms/step - loss: 0.3061 - accuracy: 0.8906 - val_loss: 0.3355 - val_accuracy: 0.8788
 Epoch 11/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.2982 - accuracy: 0.8943 - val_loss: 0.3208 - val_accuracy: 0.8857
+15/15 [==============================] - 4s 259ms/step - loss: 0.2920 - accuracy: 0.8957 - val_loss: 0.3162 - val_accuracy: 0.8873
 Epoch 12/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.2832 - accuracy: 0.9007 - val_loss: 0.3130 - val_accuracy: 0.8895
+15/15 [==============================] - 4s 260ms/step - loss: 0.2766 - accuracy: 0.9020 - val_loss: 0.3037 - val_accuracy: 0.8904
 Epoch 13/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.2728 - accuracy: 0.9036 - val_loss: 0.3041 - val_accuracy: 0.8921
+15/15 [==============================] - 4s 260ms/step - loss: 0.2683 - accuracy: 0.9044 - val_loss: 0.2971 - val_accuracy: 0.8946
 Epoch 14/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.2625 - accuracy: 0.9082 - val_loss: 0.2962 - val_accuracy: 0.8935
+15/15 [==============================] - 4s 260ms/step - loss: 0.2617 - accuracy: 0.9061 - val_loss: 0.2943 - val_accuracy: 0.8947
 Epoch 15/15
-15/15 [==============================] - 2s 122ms/step - loss: 0.2523 - accuracy: 0.9113 - val_loss: 0.2926 - val_accuracy: 0.8943
+15/15 [==============================] - 4s 260ms/step - loss: 0.2474 - accuracy: 0.9112 - val_loss: 0.2941 - val_accuracy: 0.8919
 </pre>
 
 ## Impact of memory on Training
