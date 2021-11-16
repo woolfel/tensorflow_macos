@@ -1,14 +1,14 @@
 # Hardware
 
-M1 Macbook Air
-16G memory
-Monterey
-Python 3 ARM64
+* M1 Macbook Air
+* 16G memory
+* Monterey
+* Python 3 ARM64
 
 ## Training settings
 
-Batch Size: 128
-GPU Average: 85%
+* Batch Size: 128
+* GPU Average: 85%
 
 <pre>
 peter@AirPete bin % time ./python3 /Users/peter/tf-train-test.py
@@ -124,6 +124,7 @@ Epoch 12/12
 
 Results with tensorflow-metal and fashion_mnist
 
+<pre>
 (tensorflow_ml) peter@AirPete benchmarks % python3 ./tfmetal_mnist_test.py 
 2.6.0
 Metal device set to: Apple M1
@@ -161,3 +162,4 @@ Epoch 11/12
 469/469 [==============================] - 9s 18ms/step - loss: 0.0414 - accuracy: 0.9856 - val_loss: 0.3037 - val_accuracy: 0.9209
 Epoch 12/12
 469/469 [==============================] - 9s 18ms/step - loss: 0.0331 - accuracy: 0.9883 - val_loss: 0.3314 - val_accuracy: 0.9200
+</pre>
