@@ -10,6 +10,7 @@ Python 3 ARM64
 Batch Size: 128
 GPU Average: 85%
 
+<pre>
 peter@AirPete bin % time ./python3 /Users/peter/tf-train-test.py
 2.4.0-rc0
 2021-10-27 08:40:14.980015: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
@@ -43,10 +44,11 @@ Epoch 11/12
 Epoch 12/12
 469/469 [==============================] - 12s 25ms/step - batch: 234.0000 - size: 1.0000 - loss: 0.0041 - accuracy: 0.9987 - val_loss: 0.0499 - val_accuracy: 0.9885
 ./python3 /Users/peter/tf-train-test.py  97.72s user 25.94s system 80% cpu 2:33.11 total
+</pre>
 
 Batch Size: 256
 GPU Average: 85-90%
-
+<pre>
 peter@AirPete bin % time ./python3 /Users/peter/tf-train-test.py 
 2.4.0-rc0
 2021-10-27 08:29:48.064385: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
@@ -80,11 +82,11 @@ Epoch 11/12
 Epoch 12/12
 235/235 [==============================] - 11s 45ms/step - batch: 117.0000 - size: 1.0000 - loss: 0.0079 - accuracy: 0.9975 - val_loss: 0.0424 - val_accuracy: 0.9894
 ./python3 /Users/peter/tf-train-test.py  86.64s user 23.11s system 78% cpu 2:20.20 total
-
+</pre>
 
 Batch Size: 512
 GPU Average: 90%
-
+<pre>
 peter@AirPete bin % time ./python3 /Users/peter/tf-train-test.py
 2.4.0-rc0
 2021-10-27 08:35:41.481859: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
@@ -118,7 +120,7 @@ Epoch 11/12
 Epoch 12/12
 118/118 [==============================] - 11s 88ms/step - batch: 58.5000 - size: 1.0000 - loss: 0.0041 - accuracy: 0.9986 - val_loss: 0.0356 - val_accuracy: 0.9899
 ./python3 /Users/peter/tf-train-test.py  86.64s user 23.13s system 79% cpu 2:17.89 total
-
+</pre>
 
 Results with tensorflow-metal and fashion_mnist
 
