@@ -1,7 +1,11 @@
+# Hardware
+
 M1 Macbook Air
 16G memory
 Monterey
 Python 3 ARM64
+
+## Training settings
 
 Batch Size: 128
 GPU Average: 85%
