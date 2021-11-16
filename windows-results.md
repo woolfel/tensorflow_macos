@@ -241,4 +241,4 @@ It's important to keep in mind the memory used varies with batch size. If you're
 
 * 200 x 35 = 7G projected memory requirement
 
-When the memory requirements exceeds physical memory, the system will use swap. In many cases, it might still run, but it will take longer to train.
+When the memory requirements exceeds physical memory, the system will use swap. In many cases, it might still run, but it will take longer to train. If you want to learn more about batch size recommendations, there are plenty of YouTube videos that give a good overview. For small models with small datasets, 32 to 128 batch size is usually sufficient. If you're using large datasets with more than 100 million records, you'll likely want to use much larger batch size to speed up the training time. In those situations, you really want to train on the cloud.
