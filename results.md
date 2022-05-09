@@ -1,7 +1,13 @@
 # Hardware
 
-* M1 Macbook Air
+## M1 Macbook Air
 * 16G memory
+* Monterey
+* Python 3 ARM64
+
+## M1 Max Macbook Pro
+* 32G memory
+* 24 GPU
 * Monterey
 * Python 3 ARM64
 
@@ -162,4 +168,52 @@ Epoch 11/12
 469/469 [==============================] - 9s 18ms/step - loss: 0.0414 - accuracy: 0.9856 - val_loss: 0.3037 - val_accuracy: 0.9209
 Epoch 12/12
 469/469 [==============================] - 9s 18ms/step - loss: 0.0331 - accuracy: 0.9883 - val_loss: 0.3314 - val_accuracy: 0.9200
+</pre>
+
+# M1 Max Macbook Pro
+
+<pre>
+(tensorflow_ml) peter@Peters-MBP benchmarks % python3 tfmetal_fmnist_test.py
+2.6.0
+Metal device set to: Apple M1 Max
+
+systemMemory: 32.00 GB
+maxCacheSize: 10.67 GB
+
+2021-11-16 18:53:47.719829: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2021-11-16 18:53:47.719943: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+Epoch 1/15
+2021-11-16 18:53:48.002876: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+2021-11-16 18:53:48.003886: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+2021-11-16 18:53:48.003946: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:112] Plugin optimizer for device_type GPU is enabled.
+234/235 [============================>.] - ETA: 0s - loss: 0.5547 - accuracy: 0.79982021-11-16 18:53:53.367536: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:112] Plugin optimizer for device_type GPU is enabled.
+235/235 [==============================] - 6s 20ms/step - loss: 0.5544 - accuracy: 0.7998 - val_loss: 0.3760 - val_accuracy: 0.8684
+Epoch 2/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.3148 - accuracy: 0.8873 - val_loss: 0.3073 - val_accuracy: 0.8876
+Epoch 3/15
+235/235 [==============================] - 4s 19ms/step - loss: 0.2605 - accuracy: 0.9057 - val_loss: 0.2977 - val_accuracy: 0.8927
+Epoch 4/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.2208 - accuracy: 0.9181 - val_loss: 0.2623 - val_accuracy: 0.9082
+Epoch 5/15
+235/235 [==============================] - 4s 19ms/step - loss: 0.1941 - accuracy: 0.9289 - val_loss: 0.2502 - val_accuracy: 0.9105
+Epoch 6/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.1751 - accuracy: 0.9347 - val_loss: 0.2470 - val_accuracy: 0.9131
+Epoch 7/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.1514 - accuracy: 0.9438 - val_loss: 0.2427 - val_accuracy: 0.9173
+Epoch 8/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.1311 - accuracy: 0.9510 - val_loss: 0.2462 - val_accuracy: 0.9185
+Epoch 9/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.1125 - accuracy: 0.9576 - val_loss: 0.2628 - val_accuracy: 0.9184
+Epoch 10/15
+235/235 [==============================] - 4s 19ms/step - loss: 0.0995 - accuracy: 0.9630 - val_loss: 0.2543 - val_accuracy: 0.9253
+Epoch 11/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.0833 - accuracy: 0.9678 - val_loss: 0.2838 - val_accuracy: 0.9170
+Epoch 12/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.0679 - accuracy: 0.9747 - val_loss: 0.2931 - val_accuracy: 0.9209
+Epoch 13/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.0592 - accuracy: 0.9787 - val_loss: 0.3195 - val_accuracy: 0.9223
+Epoch 14/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.0466 - accuracy: 0.9831 - val_loss: 0.3672 - val_accuracy: 0.9220
+Epoch 15/15
+235/235 [==============================] - 4s 18ms/step - loss: 0.0427 - accuracy: 0.9842 - val_loss: 0.3951 - val_accuracy: 0.9169
 </pre>
